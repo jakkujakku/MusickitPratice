@@ -79,7 +79,23 @@ class AppleMusicAPI {
      
         URLSession.shared.dataTask(with: musicRequest) { (data, response, error) in
             guard error == nil else { return }
-     
+            
+            if let json = try? JSON(data: data!) {
+                // 2
+                let result = (json["results"]["songs"]["data"]).array!
+                // 3
+                for song in result {
+                    // 4
+                    let attributes = song["attributes"]
+                    let currentSong = Song(id: attributes["playParams"]["id"].string!, name: attributes["name"].string!, artistName: attributes["artistName"].string!, artworkURL: attributes["artwork"]["url"].string!)
+                    songs.append(currentSong)
+                }
+                // 5
+                lock.signal()
+            } else {
+                // 6
+                lock.signal()
+            }
         }.resume()
      
         lock.wait()
