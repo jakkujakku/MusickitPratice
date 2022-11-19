@@ -7,9 +7,11 @@
 
 import SwiftUI
 import StoreKit
+import MediaPlayer
 
 struct ContentView: View {
     @State private var selection = 0
+    @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     
     var body: some View {
         TabView(selection: $selection) {

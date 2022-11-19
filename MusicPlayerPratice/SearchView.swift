@@ -6,16 +6,29 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SearchView: View {
     @State private var searchText = ""
     @State private var searchResults = [Song]()
-    let songs = ["Blueming", "Celebrity", "Strawberry moon"]
-    
+
     var body: some View {
         VStack {
             TextField("Search Songs", text: $searchText, onCommit: {
-                print(self.searchText)
+                // 1
+                UIApplication.shared.resignFirstResponder()
+                if self.searchText.isEmpty {
+                    // 2
+                    self.searchResults = []
+                } else {
+                    // 3
+                    SKCloudServiceController.requestAuthorization { (status) in
+                        if status == .authorized {
+                            // 4
+                            self.searchResults = AppleMusicAPI().searchAppleMusic(self.searchText)
+                        }
+                    }
+                }
             })
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(.horizontal, 16)
