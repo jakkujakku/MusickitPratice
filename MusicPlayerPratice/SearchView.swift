@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State private var searchText = ""
+    @State private var searchResults = [Song]()
     let songs = ["Blueming", "Celebrity", "Strawberry moon"]
     
     var body: some View {
@@ -21,8 +22,8 @@ struct SearchView: View {
             .accentColor(.pink)
             
             List {
-                ForEach(songs, id: \.self) {
-                    songTitle in
+                ForEach(searchResults, id: \.id) {
+                    song in
                     HStack {
                         Image(systemName: "rectangle.stack.fill")
                             .resizable()
@@ -31,16 +32,16 @@ struct SearchView: View {
                             .shadow(radius: 2)
                         
                     VStack(alignment: .leading) {
-                        Text(songTitle)
+                        Text(song.name)
                                 .font(.headline)
                            
-                        Text("Artist Title")
+                        Text(song.artistName)
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                         }
                         Spacer()
                         Button(action: {
-                                print("Add song")
+                            print("Playing \(song.name)")
                             }) {
                                 Image(systemName: "play.fill")
                                     .foregroundColor(.pink)

@@ -34,7 +34,7 @@ struct ContentView: View {
         .onAppear() {
             SKCloudServiceController.requestAuthorization { (status) in
                 if status == .authorized {
-                    print(AppleMusicAPI().fetchStorefrontID())
+                    print(AppleMusicAPI().searchAppleMusic("IU"))
                 }
             }
         }
