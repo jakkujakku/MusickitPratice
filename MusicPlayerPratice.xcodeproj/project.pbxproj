@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E25537B292889EC00BCAF89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E25537A292889EC00BCAF89 /* ContentView.swift */; };
 		4E306F1D2927E63100F52EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E306F1C2927E63100F52EDE /* AppDelegate.swift */; };
 		4E306F1F2927E63100F52EDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E306F1E2927E63100F52EDE /* SceneDelegate.swift */; };
 		4E306F242927E63100F52EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E306F222927E63100F52EDE /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E25537A292889EC00BCAF89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E306F192927E63100F52EDE /* MusicPlayerPratice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayerPratice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E306F1C2927E63100F52EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E306F1E2927E63100F52EDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				4E306F1C2927E63100F52EDE /* AppDelegate.swift */,
 				4E306F1E2927E63100F52EDE /* SceneDelegate.swift */,
 				4E306F322927E80100F52EDE /* PlayerView.swift */,
+				4E25537A292889EC00BCAF89 /* ContentView.swift */,
 				4E306F342927E80B00F52EDE /* SearchView.swift */,
 				4E306F302927E7F200F52EDE /* AppleMusicAPI.swift */,
 				4E306F502927E96800F52EDE /* Song.swift */,
@@ -149,6 +152,7 @@
 			files = (
 				4E306F512927E96800F52EDE /* Song.swift in Sources */,
 				4E306F1D2927E63100F52EDE /* AppDelegate.swift in Sources */,
+				4E25537B292889EC00BCAF89 /* ContentView.swift in Sources */,
 				4E306F1F2927E63100F52EDE /* SceneDelegate.swift in Sources */,
 				4E306F332927E80100F52EDE /* PlayerView.swift in Sources */,
 				4E306F352927E80B00F52EDE /* SearchView.swift in Sources */,
