@@ -7,8 +7,10 @@
 
 import SwiftUI
 import StoreKit
+import MediaPlayer
 
 struct SearchView: View {
+    @Binding var musicPlayer: MPMusicPlayerController
     @State private var searchText = ""
     @State private var searchResults = [Song]()
 
@@ -54,7 +56,8 @@ struct SearchView: View {
                         }
                         Spacer()
                         Button(action: {
-                            print("Playing \(song.name)")
+                            self.musicPlayer.setQueue(with: [song.id])
+                            self.musicPlayer.play()
                             }) {
                                 Image(systemName: "play.fill")
                                     .foregroundColor(.pink)

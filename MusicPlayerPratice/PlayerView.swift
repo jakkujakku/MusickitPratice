@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 
 struct PlayerView: View {
+    @Binding var musicPlayer: MPMusicPlayerController
     var body: some View {
         GeometryReader { geometry in
             // 1

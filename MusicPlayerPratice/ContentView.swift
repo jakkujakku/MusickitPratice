@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            PlayerView()
+            PlayerView(musicPlayer: self.$musicPlayer)
                 .tag(0)
                 .tabItem {
                     VStack {
@@ -23,7 +23,7 @@ struct ContentView: View {
                         Text("Player")
                     }
                 }
-            SearchView()
+            SearchView(musicPlayer: self.$musicPlayer)
                 .tag(1)
                 .tabItem {
                     VStack {
