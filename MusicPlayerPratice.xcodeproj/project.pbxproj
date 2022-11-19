@@ -50,7 +50,6 @@
 		4E306F102927E63100F52EDE = {
 			isa = PBXGroup;
 			children = (
-				4E25537C29288F4500BCAF89 /* SwiftyJSON.swift */,
 				4E306F1B2927E63100F52EDE /* MusicPlayerPratice */,
 				4E306F1A2927E63100F52EDE /* Products */,
 			);
@@ -73,6 +72,7 @@
 				4E25537A292889EC00BCAF89 /* ContentView.swift */,
 				4E306F342927E80B00F52EDE /* SearchView.swift */,
 				4E306F302927E7F200F52EDE /* AppleMusicAPI.swift */,
+				4E25537C29288F4500BCAF89 /* SwiftyJSON.swift */,
 				4E306F502927E96800F52EDE /* Song.swift */,
 				4E306F222927E63100F52EDE /* Main.storyboard */,
 				4E306F252927E63300F52EDE /* Assets.xcassets */,
