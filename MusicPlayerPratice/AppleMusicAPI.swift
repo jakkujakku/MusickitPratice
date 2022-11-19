@@ -52,8 +52,14 @@ class AppleMusicAPI {
      
             // 4
             if let json = try? JSON(data: data!) {
-                print(json.rawString())
-            }
+                let result = (json["data"]).array!
+                let id = (result[0].dictionaryValue)["id"]!
+                 
+                // 2
+                storefrontID = id.stringValue
+                 
+                // 3
+                lock.signal()            }
         }.resume()
      
         // 5
