@@ -10,12 +10,13 @@ import StoreKit
 import MediaPlayer
 
 struct ContentView: View {
+    @State private var currentSong = Song(id: "", name: "", artistName: "", artworkURL: "")
     @State private var selection = 0
     @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     
     var body: some View {
         TabView(selection: $selection) {
-            PlayerView(musicPlayer: self.$musicPlayer)
+            PlayerView(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                 .tag(0)
                 .tabItem {
                     VStack {
@@ -23,7 +24,7 @@ struct ContentView: View {
                         Text("Player")
                     }
                 }
-            SearchView(musicPlayer: self.$musicPlayer)
+            SearchView(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                 .tag(1)
                 .tabItem {
                     VStack {

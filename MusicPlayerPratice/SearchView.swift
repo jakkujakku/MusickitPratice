@@ -8,9 +8,11 @@
 import SwiftUI
 import StoreKit
 import MediaPlayer
+import SDWebImageSwiftUI
 
 struct SearchView: View {
     @Binding var musicPlayer: MPMusicPlayerController
+    @Binding var currentSong: Song
     @State private var searchText = ""
     @State private var searchResults = [Song]()
 
@@ -40,7 +42,7 @@ struct SearchView: View {
                 ForEach(searchResults, id: \.id) {
                     song in
                     HStack {
-                        Image(systemName: "rectangle.stack.fill")
+                        WebImage(url: URL(string: song.artworkURL.replacingOccurrences(of: "{w}", with: "80").replacingOccurrences(of: "{h}", with: "80")))
                             .resizable()
                             .frame(width: 40, height: 40)
                             .cornerRadius(5)
@@ -56,9 +58,10 @@ struct SearchView: View {
                         }
                         Spacer()
                         Button(action: {
+                            self.currentSong = song
                             self.musicPlayer.setQueue(with: [song.id])
                             self.musicPlayer.play()
-                            }) {
+                        }) {
                                 Image(systemName: "play.fill")
                                     .foregroundColor(.pink)
                             }
