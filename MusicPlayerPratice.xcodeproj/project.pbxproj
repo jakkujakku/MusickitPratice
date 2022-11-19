@@ -11,7 +11,6 @@
 		4E25537D29288F4500BCAF89 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E25537C29288F4500BCAF89 /* SwiftyJSON.swift */; };
 		4E306F1D2927E63100F52EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E306F1C2927E63100F52EDE /* AppDelegate.swift */; };
 		4E306F1F2927E63100F52EDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E306F1E2927E63100F52EDE /* SceneDelegate.swift */; };
-		4E306F242927E63100F52EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E306F222927E63100F52EDE /* Main.storyboard */; };
 		4E306F262927E63300F52EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E306F252927E63300F52EDE /* Assets.xcassets */; };
 		4E306F292927E63300F52EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E306F272927E63300F52EDE /* LaunchScreen.storyboard */; };
 		4E306F312927E7F200F52EDE /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E306F302927E7F200F52EDE /* AppleMusicAPI.swift */; };
@@ -26,7 +25,6 @@
 		4E306F192927E63100F52EDE /* MusicPlayerPratice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayerPratice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E306F1C2927E63100F52EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E306F1E2927E63100F52EDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E306F232927E63100F52EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E306F252927E63300F52EDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E306F282927E63300F52EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E306F2A2927E63300F52EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,13 +66,12 @@
 			children = (
 				4E306F1C2927E63100F52EDE /* AppDelegate.swift */,
 				4E306F1E2927E63100F52EDE /* SceneDelegate.swift */,
-				4E306F322927E80100F52EDE /* PlayerView.swift */,
 				4E25537A292889EC00BCAF89 /* ContentView.swift */,
-				4E306F342927E80B00F52EDE /* SearchView.swift */,
 				4E306F302927E7F200F52EDE /* AppleMusicAPI.swift */,
-				4E25537C29288F4500BCAF89 /* SwiftyJSON.swift */,
 				4E306F502927E96800F52EDE /* Song.swift */,
-				4E306F222927E63100F52EDE /* Main.storyboard */,
+				4E306F322927E80100F52EDE /* PlayerView.swift */,
+				4E306F342927E80B00F52EDE /* SearchView.swift */,
+				4E25537C29288F4500BCAF89 /* SwiftyJSON.swift */,
 				4E306F252927E63300F52EDE /* Assets.xcassets */,
 				4E306F272927E63300F52EDE /* LaunchScreen.storyboard */,
 				4E306F2A2927E63300F52EDE /* Info.plist */,
@@ -142,7 +139,6 @@
 			files = (
 				4E306F292927E63300F52EDE /* LaunchScreen.storyboard in Resources */,
 				4E306F262927E63300F52EDE /* Assets.xcassets in Resources */,
-				4E306F242927E63100F52EDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4E306F222927E63100F52EDE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E306F232927E63100F52EDE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4E306F272927E63300F52EDE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -10,8 +10,8 @@ import StoreKit
 // 2
 class AppleMusicAPI {
     // 3
-    let developerToken = "YOUR DEVELOPER TOKEN FROM PART 1"
- 
+//    let developerToken = "YOUR DEVELOPER TOKEN FROM PART 1"
+    let developerToken = "N9N6L2LFUS"
     // 4
     func getUserToken() -> String {
         var userToken = String()
@@ -65,5 +65,24 @@ class AppleMusicAPI {
         // 5
         lock.wait()
         return storefrontID
+    }
+    
+    func searchAppleMusic(_ searchTerm: String!) -> [Song] {
+        let lock = DispatchSemaphore(value: 0)
+        var songs = [Song]()
+     
+        let musicURL = URL(string: "https://api.music.apple.com/v1/catalog/\(fetchStorefrontID())/search?term=\(searchTerm.replacingOccurrences(of: " ", with: "+"))&types=songs&limit=25")!
+        var musicRequest = URLRequest(url: musicURL)
+        musicRequest.httpMethod = "GET"
+        musicRequest.addValue("Bearer \(developerToken)", forHTTPHeaderField: "Authorization")
+            musicRequest.addValue(getUserToken(), forHTTPHeaderField: "Music-User-Token")
+     
+        URLSession.shared.dataTask(with: musicRequest) { (data, response, error) in
+            guard error == nil else { return }
+     
+        }.resume()
+     
+        lock.wait()
+        return songs
     }
 }
