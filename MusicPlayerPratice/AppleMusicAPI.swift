@@ -10,8 +10,8 @@ import StoreKit
 // 2
 class AppleMusicAPI {
     // 3
-//    let developerToken = "YOUR DEVELOPER TOKEN FROM PART 1"
-    let developerToken = "N9N6L2LFUS"
+    let developerToken = "YOUR DEVELOPER TOKEN FROM PART 1"
+    
     // 4
     func getUserToken() -> String {
         var userToken = String()
