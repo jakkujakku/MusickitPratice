@@ -15,7 +15,22 @@ class AppleMusicAPI {
     // 4
     func getUserToken() -> String {
         var userToken = String()
- 
+
+        // 1
+        let lock = DispatchSemaphore(value: 0)
+
+        // 2
+        SKCloudServiceController().requestUserToken(forDeveloperToken: developerToken) { (receivedToken, error) in
+            // 3
+            guard error == nil else { return }
+            if let token = receivedToken {
+                userToken = token
+                lock.signal()
+            }
+        }
+
+        // 4
+        lock.wait()
         return userToken
     }
 }
